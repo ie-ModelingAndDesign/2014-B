@@ -1,0 +1,362 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6254" systemVersion="13F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="vXZ-lx-hvc">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6247"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="ufC-wZ-h7g">
+            <objects>
+                <viewController id="vXZ-lx-hvc" customClass="ViewController" customModule="Project01" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="jyV-Pf-zRb"/>
+                        <viewControllerLayoutGuide type="bottom" id="2fi-mo-0CV"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="kh9-bI-dsS">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <navigationBar contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="9Fm-ug-dNr">
+                                <rect key="frame" x="0.0" y="20" width="600" height="44"/>
+                                <items>
+                                    <navigationItem title="時間割" id="w8q-XL-HrA">
+                                        <barButtonItem key="leftBarButtonItem" style="plain" id="aKL-ze-sc3">
+                                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="LsE-VD-Fd2">
+                                                <rect key="frame" x="-23" y="-15" width="133" height="30"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <state key="normal" title="追加">
+                                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                                </state>
+                                                <connections>
+                                                    <segue destination="4rH-6b-hyu" kind="custom" id="ZJC-4N-jrI"/>
+                                                </connections>
+                                            </button>
+                                        </barButtonItem>
+                                        <barButtonItem key="rightBarButtonItem" style="plain" id="gi5-Ju-59v">
+                                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="VNH-wT-ccY">
+                                                <rect key="frame" x="-23" y="-15" width="133" height="30"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <state key="normal" title="課題">
+                                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="TimeSchedulerButton:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="bvH-kt-3QR"/>
+                                                    <segue destination="43m-rf-oWB" kind="custom" id="YnC-TJ-UTh"/>
+                                                </connections>
+                                            </button>
+                                        </barButtonItem>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="9Fm-ug-dNr" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" constant="-16" id="5Lx-iI-FaQ"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="9Fm-ug-dNr" secondAttribute="trailing" constant="-16" id="Vt8-aE-q6z"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="190" y="155"/>
+        </scene>
+        <!--Add Timetable-->
+        <scene sceneID="zaN-IV-17n">
+            <objects>
+                <viewController id="4rH-6b-hyu" customClass="AddTimetable" customModule="Project01" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="YR2-Yz-mBo"/>
+                        <viewControllerLayoutGuide type="bottom" id="0hZ-lx-6M3"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="uqx-nm-ZhJ">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <navigationBar contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Wxw-SW-FRm">
+                                <rect key="frame" x="0.0" y="20" width="600" height="44"/>
+                                <items>
+                                    <navigationItem title="科目追加" id="2Py-kX-xl4">
+                                        <barButtonItem key="leftBarButtonItem" style="plain" id="GFY-eq-Eai">
+                                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="XVC-zt-QIM">
+                                                <rect key="frame" x="-23" y="-15" width="133" height="30"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <state key="normal" title="Button">
+                                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                                </state>
+                                                <connections>
+                                                    <segue destination="FPf-cr-BWL" kind="unwind" unwindAction="TimeSchedulerButton:" id="XKs-B2-3Kx"/>
+                                                </connections>
+                                            </button>
+                                        </barButtonItem>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Cdk-fT-Tkq">
+                                <rect key="frame" x="109" y="131" width="374" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="name" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fhU-Vi-i25">
+                                <rect key="frame" x="279" y="102" width="43" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="場所" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="23j-JG-FmC">
+                                <rect key="frame" x="283" y="179" width="34" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MdX-9K-l25">
+                                <rect key="frame" x="285" y="272" width="30" height="30"/>
+                                <state key="normal" title="追加">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="addData:" destination="4rH-6b-hyu" eventType="touchUpInside" id="fLk-I0-1Le"/>
+                                </connections>
+                            </button>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Rb7-Id-nyT">
+                                <rect key="frame" x="109" y="208" width="374" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="Cdk-fT-Tkq" firstAttribute="leading" secondItem="uqx-nm-ZhJ" secondAttribute="leadingMargin" constant="93" id="Atx-UN-Do7"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="Cdk-fT-Tkq" secondAttribute="trailing" constant="101" id="GwD-Fe-IIx"/>
+                            <constraint firstItem="Wxw-SW-FRm" firstAttribute="leading" secondItem="uqx-nm-ZhJ" secondAttribute="leadingMargin" constant="-16" id="KFq-Dc-Ni2"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="Wxw-SW-FRm" secondAttribute="trailing" constant="-16" id="yZF-r6-ye5"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="nameText" destination="Cdk-fT-Tkq" id="y8n-TM-q8f"/>
+                        <outlet property="roomText" destination="Rb7-Id-nyT" id="K29-gl-dP3"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="vBV-cq-yns" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="FPf-cr-BWL" userLabel="Exit" sceneMemberID="exit"/>
+            </objects>
+            <point key="canvasLocation" x="190" y="885"/>
+        </scene>
+        <!--Add Tasklist-->
+        <scene sceneID="1Ib-1g-osL">
+            <objects>
+                <viewController id="Q4b-SB-EMb" customClass="AddTasklist" customModule="Project01" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="cz1-n5-x98"/>
+                        <viewControllerLayoutGuide type="bottom" id="IwO-4A-AAP"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Pk8-Uc-xNx">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="UDS-ow-2mb">
+                                <rect key="frame" x="0.0" y="28" width="600" height="44"/>
+                                <items>
+                                    <navigationItem title="課題追加" id="7Ef-zN-zSP">
+                                        <barButtonItem key="leftBarButtonItem" style="plain" id="ZTn-ai-aKE">
+                                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="gpg-SB-Ssb">
+                                                <rect key="frame" x="-23" y="-15" width="147" height="30"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <state key="normal" title="戻る">
+                                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                                </state>
+                                                <connections>
+                                                    <segue destination="ZHe-b5-NTs" kind="unwind" unwindAction="TaskBackButton:" id="P8h-dY-Nxf"/>
+                                                </connections>
+                                            </button>
+                                        </barButtonItem>
+                                        <barButtonItem key="rightBarButtonItem" style="plain" id="ogy-kl-QjM">
+                                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="PPC-fC-svx">
+                                                <rect key="frame" x="-23" y="-15" width="133" height="30"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <state key="normal" title="追加">
+                                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="AddTask:" destination="Q4b-SB-EMb" eventType="touchUpInside" id="ijs-Q6-fQN"/>
+                                                </connections>
+                                            </button>
+                                            <connections>
+                                                <action selector="addCoreData:" destination="Q4b-SB-EMb" id="oBR-61-3aW"/>
+                                            </connections>
+                                        </barButtonItem>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="n1o-sX-jPV">
+                                <rect key="frame" x="40" y="145" width="286" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="締め切り" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rBG-6j-rfy">
+                                <rect key="frame" x="40" y="194" width="68" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <pickerView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="RVX-Hz-03y">
+                                <rect key="frame" x="33" y="223" width="132" height="162"/>
+                            </pickerView>
+                            <pickerView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="CX5-q1-Hsb">
+                                <rect key="frame" x="173" y="223" width="169" height="162"/>
+                            </pickerView>
+                            <pickerView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="1Uj-0U-H6V">
+                                <rect key="frame" x="366" y="223" width="127" height="162"/>
+                            </pickerView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="科目" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="R6D-H5-LWv">
+                                <rect key="frame" x="33" y="509" width="34" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="進捗" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cTx-KT-xxn">
+                                <rect key="frame" x="33" y="384" width="34" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <slider opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="sdg-qD-ayM">
+                                <rect key="frame" x="140" y="380" width="279" height="31"/>
+                            </slider>
+                            <pickerView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="HrE-cX-5da">
+                                <rect key="frame" x="165" y="430" width="161" height="162"/>
+                            </pickerView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="名前" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ijf-yB-sv5">
+                                <rect key="frame" x="16" y="111" width="34" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <connections>
+                        <outlet property="nameText" destination="n1o-sX-jPV" id="mkU-75-P5q"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="VDW-yf-WDo" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="ZHe-b5-NTs" userLabel="Exit" sceneMemberID="exit"/>
+            </objects>
+            <point key="canvasLocation" x="898" y="833"/>
+        </scene>
+        <!--To Do View Controllwe-->
+        <scene sceneID="BCw-y3-IRK">
+            <objects>
+                <viewController id="43m-rf-oWB" customClass="ToDoViewControllwe" customModule="Project01" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="eiP-xA-898"/>
+                        <viewControllerLayoutGuide type="bottom" id="MNY-bq-5UE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="IDo-1P-W23">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="VQe-Zb-6dX">
+                                <rect key="frame" x="0.0" y="75" width="600" height="530"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <prototypes>
+                                    <tableViewCell contentMode="scaleToFill" restorationIdentifier="twiCell" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell" id="Cto-EM-mBl" customClass="CustomViewCell" customModule="Project01">
+                                        <rect key="frame" x="0.0" y="0.0" width="600" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" tag="1" contentMode="center" tableViewCell="Cto-EM-mBl" id="h5C-nw-xFA">
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3nq-0D-guj">
+                                                    <rect key="frame" x="236" y="22" width="42" height="21"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="9"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dX8-3b-qAf">
+                                                    <rect key="frame" x="298" y="2" width="46" height="30"/>
+                                                    <state key="normal" title="Button">
+                                                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                                    </state>
+                                                </button>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="R6u-AA-r3z">
+                                                    <rect key="frame" x="8" y="5" width="245" height="32"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="dX8-3b-qAf" firstAttribute="leading" secondItem="3nq-0D-guj" secondAttribute="trailing" constant="20" id="0kK-O4-NcO"/>
+                                                <constraint firstItem="dX8-3b-qAf" firstAttribute="leading" secondItem="R6u-AA-r3z" secondAttribute="trailing" constant="45" id="Mqk-Mg-Ayc"/>
+                                                <constraint firstItem="3nq-0D-guj" firstAttribute="leading" secondItem="h5C-nw-xFA" secondAttribute="leadingMargin" constant="228" id="VG1-te-sYh"/>
+                                                <constraint firstItem="R6u-AA-r3z" firstAttribute="leading" secondItem="h5C-nw-xFA" secondAttribute="leadingMargin" id="aSa-Dk-lPC"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="dX8-3b-qAf" secondAttribute="trailing" constant="248" id="mP1-2H-Q6t"/>
+                                                <constraint firstItem="dX8-3b-qAf" firstAttribute="leading" secondItem="3nq-0D-guj" secondAttribute="trailing" constant="20" id="ryU-Hx-Avy"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="name" destination="R6u-AA-r3z" id="90o-9u-qGp"/>
+                                            <outlet property="progress" destination="3nq-0D-guj" id="S27-f6-RKs"/>
+                                            <outlet property="twiButton" destination="dX8-3b-qAf" id="vUs-ZZ-uR3"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="43m-rf-oWB" id="wRs-p6-h4m"/>
+                                    <outlet property="delegate" destination="43m-rf-oWB" id="m13-qE-bVL"/>
+                                </connections>
+                            </tableView>
+                            <navigationBar contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="xtf-IC-jXi">
+                                <rect key="frame" x="0.0" y="20" width="600" height="44"/>
+                                <items>
+                                    <navigationItem title="課題たち" id="gNG-co-QkO">
+                                        <barButtonItem key="leftBarButtonItem" style="plain" id="a2w-Jf-6Po">
+                                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="X04-u7-M6u">
+                                                <rect key="frame" x="-23" y="-15" width="133" height="30"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <state key="normal" title="追加">
+                                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                                </state>
+                                                <connections>
+                                                    <segue destination="Q4b-SB-EMb" kind="custom" id="Y9h-vi-lHR"/>
+                                                </connections>
+                                            </button>
+                                        </barButtonItem>
+                                        <barButtonItem key="rightBarButtonItem" style="plain" id="Mxe-WM-sw8">
+                                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="Pf8-tB-ocU">
+                                                <rect key="frame" x="-23" y="-15" width="133" height="30"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <state key="normal" title="時間割">
+                                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                                </state>
+                                                <connections>
+                                                    <segue destination="82W-zh-m6S" kind="unwind" unwindAction="TimeSchedulerButton:" id="qAX-5E-4U5"/>
+                                                </connections>
+                                            </button>
+                                            <connections>
+                                                <action selector="TaskBackButton:" destination="43m-rf-oWB" id="1PQ-61-5OX"/>
+                                            </connections>
+                                        </barButtonItem>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="xtf-IC-jXi" firstAttribute="leading" secondItem="IDo-1P-W23" secondAttribute="leadingMargin" constant="-16" id="Td6-FZ-mWn"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="xtf-IC-jXi" secondAttribute="trailing" constant="-16" id="cZg-zG-LAS"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="tableView" destination="VQe-Zb-6dX" id="H51-hh-R92"/>
+                        <outlet property="tableview" destination="VQe-Zb-6dX" id="J43-rM-V9l"/>
+                        <outlet property="taskTable" destination="VQe-Zb-6dX" id="CaP-aa-bmJ"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Qi1-lo-oqh" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="82W-zh-m6S" userLabel="Exit" sceneMemberID="exit"/>
+            </objects>
+            <point key="canvasLocation" x="898" y="148"/>
+        </scene>
+    </scenes>
+</document>

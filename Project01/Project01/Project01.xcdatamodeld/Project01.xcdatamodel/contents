@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="6254" systemVersion="13F34" minimumToolsVersion="Automatic" macOSVersion="Automatic" iOSVersion="Automatic">
+    <entity name="Task" representedClassName="Project01.Task" syncable="YES">
+        <attribute name="memo" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="progress" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
+        <attribute name="time" optional="YES" attributeType="String" syncable="YES"/>
+    </entity>
+    <entity name="Timetable" representedClassName="Project01.Timetable" syncable="YES">
+        <attribute name="day" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="room" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="subject" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="toTask" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Task" syncable="YES"/>
+    </entity>
+    <elements>
+        <element name="Timetable" positionX="-225" positionY="-108" width="108" height="103"/>
+        <element name="Task" positionX="-180" positionY="95" width="128" height="103"/>
+    </elements>
+</model>
